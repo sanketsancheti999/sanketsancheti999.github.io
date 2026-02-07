@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum | Sanket Sancheti</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">Sanket Sancheti</a>
+      <div class="header-actions">
+        <button class="lang-btn" id="langToggle" aria-label="Toggle language">
+          <span id="langLabel">EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 data-i18n="imp_title">Impressum</h1>
+
+      <div class="card">
+        <p class="small" data-i18n="imp_hint">
+          Replace the placeholders with your real details (required in Germany).
+        </p>
+
+        <h3 data-i18n="imp_provider">Service provider</h3>
+        <p>
+          <strong>Sanket Sancheti</strong><br/>
+          <span data-i18n="imp_address">Address:</span> YOUR STREET, ZIP CITY, Germany<br/>
+          <span data-i18n="imp_email">Email:</span> <a href="mailto:YOUR.EMAIL@example.com">YOUR.EMAIL@example.com</a><br/>
+          <span data-i18n="imp_phone">Phone (optional):</span> +49 ...
+        </p>
+
+        <h3 data-i18n="imp_vat">VAT ID (if applicable)</h3>
+        <p data-i18n="imp_vat_text">If you have a VAT ID (USt-IdNr.), add it here. Otherwise delete this section.</p>
+
+        <h3 data-i18n="imp_disclaimer">Disclaimer</h3>
+        <p data-i18n="imp_disclaimer_text">
+          Content is created with care. No liability for external links; responsibility lies with linked site operators.
+        </p>
+
+        <p class="small"><a href="index.html">← Back</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> Sanket Sancheti</div>
+      <div><a href="datenschutz.html" data-i18n="footer_privacy">Datenschutzerklärung</a></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    // Add minimal i18n entries for this page without duplicating the whole dictionary
+    (function(){
+      const extra = {
+        en: {
+          imp_title: "Legal Notice (Impressum)",
+          imp_hint: "Replace the placeholders with your real details (required in Germany).",
+          imp_provider: "Service provider",
+          imp_address: "Address:",
+          imp_email: "Email:",
+          imp_phone: "Phone (optional):",
+          imp_vat: "VAT ID (if applicable)",
+          imp_vat_text: "If you have a VAT ID, add it here. Otherwise delete this section.",
+          imp_disclaimer: "Disclaimer",
+          imp_disclaimer_text: "Content is created with care. No liability for external links; responsibility lies with linked site operators.",
+          footer_privacy: "Privacy Policy"
+        },
+        de: {
+          imp_title: "Impressum",
+          imp_hint: "Bitte ersetzen Sie die Platzhalter durch Ihre echten Angaben (in Deutschland erforderlich).",
+          imp_provider: "Anbieter",
+          imp_address: "Adresse:",
+          imp_email: "E-Mail:",
+          imp_phone: "Telefon (optional):",
+          imp_vat: "USt-IdNr. (falls vorhanden)",
+          imp_vat_text: "Wenn Sie eine USt-IdNr. haben, ergänzen Sie sie hier. Andernfalls löschen Sie diesen Abschnitt.",
+          imp_disclaimer: "Haftungsausschluss",
+          imp_disclaimer_text: "Inhalte werden sorgfältig erstellt. Keine Haftung für externe Links; verantwortlich sind die jeweiligen Betreiber.",
+          footer_privacy: "Datenschutzerklärung"
+        }
+      };
+
+      // Patch global i18n if present
+      if (window.i18n) {
+        window.i18n.en = { ...window.i18n.en, ...extra.en };
+        window.i18n.de = { ...window.i18n.de, ...extra.de };
+      }
+    })();
+  </script>
+</body>
+</html>

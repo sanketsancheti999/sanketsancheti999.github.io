@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datenschutzerklärung | Sanket Sancheti</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">Sanket Sancheti</a>
+      <div class="header-actions">
+        <button class="lang-btn" id="langToggle" aria-label="Toggle language">
+          <span id="langLabel">EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 data-i18n="priv_title">Datenschutzerklärung</h1>
+
+      <div class="card">
+        <p class="small" data-i18n="priv_hint">
+          This is a minimal placeholder. For Germany/EU compliance, generate a proper policy (e.g., eRecht24 / IT-Recht Kanzlei) and paste it here.
+        </p>
+
+        <h3 data-i18n="priv_overview">Overview</h3>
+        <p data-i18n="priv_overview_text">
+          This website is hosted on GitHub Pages. When you visit, technical logs may be processed by the host. If you use the contact form, your message is transmitted via Formspree to be delivered to my email.
+        </p>
+
+        <h3 data-i18n="priv_contact">Contact form</h3>
+        <p data-i18n="priv_contact_text">
+          If you submit the form, the data you enter (name, email, message, optional company/topic) is used solely to respond to your inquiry.
+        </p>
+
+        <h3 data-i18n="priv_links">External links</h3>
+        <p data-i18n="priv_links_text">
+          This site links to external services (LinkedIn, Calendly). When clicking these links, their own privacy policies apply.
+        </p>
+
+        <p class="small"><a href="index.html">← Back</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> Sanket Sancheti</div>
+      <div><a href="impressum.html">Impressum</a></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    (function(){
+      const extra = {
+        en: {
+          priv_title: "Privacy Policy",
+          priv_hint: "This is a minimal placeholder. For Germany/EU compliance, generate a proper policy (e.g., eRecht24 / IT-Recht Kanzlei) and paste it here.",
+          priv_overview: "Overview",
+          priv_overview_text: "This website is hosted on GitHub Pages. When you visit, technical logs may be processed by the host. If you use the contact form, your message is transmitted via Formspree to be delivered to my email.",
+          priv_contact: "Contact form",
+          priv_contact_text: "If you submit the form, the data you enter (name, email, message, optional company/topic) is used solely to respond to your inquiry.",
+          priv_links: "External links",
+          priv_links_text: "This site links to external services (LinkedIn, Calendly). When clicking these links, their own privacy policies apply."
+        },
+        de: {
+          priv_title: "Datenschutzerklärung",
+          priv_hint: "Dies ist ein minimaler Platzhalter. Für DSGVO-konforme Texte bitte eine Datenschutzerklärung (z. B. eRecht24 / IT-Recht Kanzlei) erstellen und hier einfügen.",
+          priv_overview: "Überblick",
+          priv_overview_text: "Diese Website wird über GitHub Pages gehostet. Beim Besuch können technische Logs durch den Hoster verarbeitet werden. Wenn Sie das Kontaktformular nutzen, wird Ihre Nachricht über Formspree an meine E-Mail zugestellt.",
+          priv_contact: "Kontaktformular",
+          priv_contact_text: "Wenn Sie das Formular absenden, werden Ihre Angaben (Name, E-Mail, Nachricht, optional Firma/Thema) ausschließlich zur Beantwortung Ihrer Anfrage verwendet.",
+          priv_links: "Externe Links",
+          priv_links_text: "Diese Website verlinkt auf externe Dienste (LinkedIn, Calendly). Beim Anklicken gelten deren Datenschutzerklärungen."
+        }
+      };
+
+      if (window.i18n) {
+        window.i18n.en = { ...window.i18n.en, ...extra.en };
+        window.i18n.de = { ...window.i18n.de, ...extra.de };
+      }
+    })();
+  </script>
+</body>
+</html>
